@@ -1,0 +1,64 @@
+{
+  "Queue": "arn:aws:mediaconvert:us-east-1:658975415077:queues/Default",
+  "UserMetadata": {},
+  "Role": "arn:aws:iam::658975415077:role/MediaConvertRole",
+  "Settings": {
+    "OutputGroups": [
+      {
+        "Name": "File Group",
+        "OutputGroupSettings": {
+          "Type": "FILE_GROUP_SETTINGS",
+          "FileGroupSettings": {
+            "Destination": "s3://ardanlabsultimateservicewithgo/web_compatible_5.1"
+          }
+        },
+        "Outputs": [
+          {
+            "Extension": "mp4",
+            "VideoDescription": {
+              "CodecSettings": {
+                "Codec": "H_264",
+                "H264Settings": {
+                  "MaxBitrate": 5000000,
+                  "RateControlMode": "QVBR",
+                  "QvbrSettings": {
+                    "QvbrQualityLevel": 7
+                  },
+                  "SceneChangeDetect": "TRANSITION_DETECTION",
+                  "QualityTuningLevel": "SINGLE_PASS_HQ"
+                }
+              }
+            },
+            "AudioDescriptions": [
+              {
+                "CodecSettings": {
+                  "Codec": "AAC",
+                  "AacSettings": {
+                    "Bitrate": 96000,
+                    "CodingMode": "CODING_MODE_2_0",
+                    "SampleRate": 48000
+                  }
+                }
+              }
+            ],
+            "ContainerSettings": {
+              "Container": "MP4"
+            }
+          }
+        ]
+      }
+    ],
+    "Inputs": [
+      {
+        "AudioSelectors": {
+          "Audio Selector 1": {
+            "DefaultSelection": "DEFAULT"
+          }
+        },
+        "VideoSelector": {},
+        "TimecodeSource": "ZEROBASED",
+        "FileInput": "s3://ardanlabsultimateservicewithgo/5.1.mov"
+      }
+    ]
+  }
+}

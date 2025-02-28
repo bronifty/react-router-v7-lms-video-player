@@ -1,0 +1,18 @@
+{
+  "courses": [
+    {
+      "id": "go-programming",
+      "title": "Go Programming",
+      "description": "Learn the Go programming language from basics to advanced concepts",
+      "thumbnail": "https://via.placeholder.com/300x169?text=Go+Programming",
+      "videosFile": "cloudfront_videos.json"
+    },
+    {
+      "id": "ardanlabs-ultimate-service-with-go",
+      "title": "Ardan Labs Ultimate Service with Go",
+      "description": "Master Ardan Labs Ultimate Service with Go",
+      "thumbnail": "https://via.placeholder.com/300x169?text=Ardan+Labs+Ultimate+Service+with+Go",
+      "videosFile": "ardanlabsultimateservicewithgo_videos.json"
+    }
+  ]
+}
